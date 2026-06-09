@@ -1,4 +1,3 @@
-````md
 # João Victor Predeus — Portfólio
 
 <p align="center">
@@ -195,4 +194,3 @@ Este projeto está sob a licença MIT.
 <p align="center">
   Desenvolvido com foco em aprendizado, organização e evolução contínua.
 </p>
-````
