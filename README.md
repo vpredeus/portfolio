@@ -55,6 +55,8 @@ O projeto envolve diferentes superfícies de software, incluindo backend, banco 
 
 Sistema web voltado à busca e exibição de informações relacionadas a instituições de longa permanência para idosos.
 
+Esse foi meu primeiro projeto, analisando de hoje é muito interessante ver a diferença para os meus projetos atuais.
+
 **Principais temas:** HTML, CSS, JavaScript, PHP, MySQL e organização de dados.
 
 ---
