@@ -31,6 +31,52 @@ a {
   text-decoration: none;
 }
 
+.renovation-banner {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 14px;
+  padding: 18px 20px;
+  background: #facc15;
+  color: #18181b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.renovation-banner::before,
+.renovation-banner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    135deg,
+    #18181b 0,
+    #18181b 10px,
+    #facc15 10px,
+    #facc15 20px
+  );
+  pointer-events: none;
+}
+
+.renovation-banner::before {
+  top: 0;
+}
+
+.renovation-banner::after {
+  bottom: 0;
+}
+
+.renovation-banner strong {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .site-header {
   position: sticky;
   top: 0;
