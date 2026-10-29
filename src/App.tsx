@@ -9,6 +9,10 @@ import { ContactSection } from "./components/sections/ContactSection";
 export function App() {
   return (
     <>
+      <aside className="renovation-banner" aria-label="Aviso sobre o portfólio">
+        <strong>Em reforma</strong>
+        <span>Estou preparando um novo portfólio.</span>
+      </aside>
       <Header />
 
       <main>
