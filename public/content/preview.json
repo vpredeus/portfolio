@@ -1,0 +1,90 @@
+{
+  "profile": {
+    "name": "João Victor Predeus",
+    "introduction": "Gosto de entender como as coisas funcionam, construir soluções e compartilhar o que aprendo pelo caminho.",
+    "email": "jvpredeus@gmail.com",
+    "links": [
+      {
+        "label": "E-mail",
+        "url": "mailto:jvpredeus@gmail.com"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/vpredeus"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/vpredeus/"
+      }
+    ]
+  },
+  "about": {
+    "paragraphs": [
+      "A curiosidade é o ponto de partida. Na programação, na matemática ou na física, gosto de investigar os fundamentos e descobrir relações entre ideias.",
+      "Desenvolver projetos e compartilhar conhecimento são formas de explorar esse interesse. Estou construindo meu caminho, aprendendo com as pessoas, com as tentativas e com os erros."
+    ],
+    "education": "Ensino Médio integrado ao Técnico em Informática no ENIAC. Também curso disciplinas da graduação pelo adiantamento profissional em Engenharia da Computação."
+  },
+  "projects": [
+    {
+      "id": "bingo",
+      "title": "BinGo",
+      "category": "SOFTWARE · EDUCAÇÃO AMBIENTAL",
+      "description": "Um ecossistema de descarte de resíduos eletrônicos com gamificação para escolas.",
+      "contribution": "Participação em software, principalmente no back-end, após o início do projeto.",
+      "url": "https://github.com/marcocaparra/BinGo",
+      "order": 1,
+      "published": true
+    },
+    {
+      "id": "patrimonios",
+      "title": "Portal de Patrimônios",
+      "category": "WEB · PATRIMÔNIO CULTURAL",
+      "description": "Consulta ao patrimônio histórico de Guarulhos, com mapa interativo e gestão do acervo.",
+      "contribution": "Projeto desenvolvido em equipe durante o estágio curricular em TI.",
+      "url": "https://github.com/Rafa-A-Brito/portal-PrefGuarulhos",
+      "order": 2,
+      "published": true
+    },
+    {
+      "id": "esg",
+      "title": "Dashboard ESG",
+      "category": "WEB · VISUALIZAÇÃO DE DADOS",
+      "description": "Painel de indicadores de impacto com gráficos comparativos, consumo de API e exportação de dados.",
+      "contribution": "Projeto da trajetória de formação e do estágio curricular em TI.",
+      "url": "https://github.com/vpredeus/DashboardESG-atividade",
+      "order": 3,
+      "published": true
+    }
+  ],
+  "studies": [
+    {
+      "id": "leituras",
+      "type": "LEITURAS",
+      "title": "Entre livros e perguntas",
+      "description": "Aqui vão entrar minhas leituras de física, química e matemática, acompanhadas de pequenas observações pessoais.",
+      "order": 1,
+      "published": true
+    },
+    {
+      "id": "formacao",
+      "type": "FORMAÇÃO E CURSOS",
+      "title": "Aprender em movimento",
+      "description": "Um espaço para conectar a formação técnica, as disciplinas da graduação e os cursos que fazem parte do caminho.",
+      "order": 2,
+      "published": true
+    },
+    {
+      "id": "reflexoes",
+      "type": "ANOTAÇÕES E REFLEXÕES",
+      "title": "Ideias em aberto",
+      "description": "Perguntas, conexões e descobertas que merecem ser compartilhadas. As primeiras anotações chegam por aqui.",
+      "order": 3,
+      "published": true
+    }
+  ],
+  "contact": {
+    "message": "Para conversar sobre projetos, compartilhar ideias ou falar sobre uma oportunidade, pode me escrever.",
+    "resumeUrl": "/documents/curriculo-joao-victor-predeus.pdf"
+  }
+}

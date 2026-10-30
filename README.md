@@ -1,198 +1,56 @@
-# João Victor Predeus — Portfólio
+# Portfólio — versão 2
 
-<p align="center">
-  <strong>Portfólio pessoal focado em desenvolvimento de software, projetos técnicos e evolução em back-end.</strong>
-</p>
+Primeiro esqueleto da nova identidade, na branch `feature/v2-refactory`.
 
-<p align="center">
-  <a href="https://github.com/vpredeus">
-    <img src="https://img.shields.io/badge/GitHub-vpredeus-181717?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Portfólio-em%20desenvolvimento-000000?style=for-the-badge&logo=vercel" alt="Portfólio">
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Status-em%20desenvolvimento-blue?style=for-the-badge" alt="Status">
-  </a>
-</p>
+## Rodar localmente
 
----
-
-## Sobre o projeto
-
-Este repositório contém o código-fonte do meu portfólio pessoal.
-
-O objetivo deste projeto é apresentar minha trajetória técnica, meus projetos de software, meus estudos e minha evolução como desenvolvedor, com ênfase em desenvolvimento back-end, Java, bancos de dados, APIs e organização de sistemas reais.
-
-O portfólio foi planejado para ser limpo, responsivo, moderno e profissional, funcionando como um ponto central para reunir meus projetos, habilidades técnicas, currículo e formas de contato.
-
----
-
-## Objetivos do portfólio
-
-- Apresentar meus principais projetos de desenvolvimento de software.
-- Mostrar minha evolução técnica como estudante e desenvolvedor.
-- Centralizar links para GitHub, LinkedIn, currículo e repositórios.
-- Construir uma interface moderna, responsiva e acessível.
-- Praticar organização de componentes, estrutura front-end e fluxo de deploy.
-- Criar uma presença profissional mais clara para oportunidades acadêmicas e profissionais.
-
----
-
-## Projetos em destaque
-
-### BinGo
-
-Sistema de descarte inteligente de lixo eletrônico com gamificação ambiental para escolas.
-
-O projeto envolve diferentes superfícies de software, incluindo backend, banco de dados, painel administrativo, aplicativo mobile do aluno e interface de totem.
-
-**Principais temas:** arquitetura de software, APIs, banco de dados, Docker, gamificação e tecnologia educacional.
-
----
-
-### Busca ILPL
-
-Sistema web voltado à busca e exibição de informações relacionadas a instituições de longa permanência para idosos.
-
-Esse foi meu primeiro projeto, analisando de hoje é muito interessante ver a diferença para os meus projetos atuais.
-
-**Principais temas:** HTML, CSS, JavaScript, PHP, MySQL e organização de dados.
-
----
-
-### B.O.O.K.
-
-Projeto desenvolvido durante minha trajetória de aprendizado técnico, com foco em tecnologia, lógica de programação e organização de software.
-
-**Principais temas:** programação, desenvolvimento de sistemas, banco de dados e documentação técnica.
-
----
-
-## Tecnologias previstas
-
-| Área | Tecnologias |
-| --- | --- |
-| Front-end | React, Next.js, TypeScript |
-| Estilização | CSS Modules, Tailwind CSS ou CSS global |
-| Deploy | Vercel |
-| Versionamento | Git e GitHub |
-| Design | Layout responsivo, interface limpa e princípios de acessibilidade |
-
----
-
-## Estrutura do projeto
-
-```txt
-portfolio/
-├── public/
-│   ├── images/
-│   └── documents/
-├── src/
-│   ├── components/
-│   ├── data/
-│   ├── pages/
-│   ├── styles/
-│   └── utils/
-├── README.md
-├── package.json
-├── .gitignore
-└── LICENSE
-```
-
-### Organização sugerida
-
-- `components/` — componentes reutilizáveis da interface.
-- `data/` — informações dos projetos, habilidades e links.
-- `pages/` — páginas principais do portfólio.
-- `styles/` — estilos globais e configurações visuais.
-- `public/` — arquivos estáticos, como imagens, ícones e currículo em PDF.
-
----
-
-## Como rodar localmente
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/vpredeus/portfolio.git
-```
-
-Acesse a pasta do projeto:
-
-```bash
-cd portfolio
-```
-
-Instale as dependências:
-
-```bash
+```sh
 npm install
-```
-
-Inicie o servidor de desenvolvimento:
-
-```bash
 npm run dev
 ```
 
-Acesse no navegador:
+Abra a URL exibida pelo Vite. `npm run build` verifica o TypeScript e gera `dist/`.
 
-```txt
-http://localhost:3000
+## Estrutura desta versão
+
+- Abertura, Sobre, Projetos, Leituras e estudos e Contato.
+- Navbar flutuante, âncoras com rolagem suave e seções com altura mínima de uma tela (`100svh`). Se o conteúdo precisar de mais espaço, a seção cresce.
+- Aparições com IntersectionObserver: cada bloco aparece uma vez e permanece visível ao voltar. Preferência de movimento reduzido é respeitada.
+- Espaço reservado para fotografia, sem ilustrações ou animação da maçã nesta etapa.
+- Currículo disponível apenas no contato. Links de e-mail, GitHub e LinkedIn também aparecem na abertura.
+
+## Conteúdo e futura planilha
+
+**O Google Sheets ainda não está conectado.** O conteúdo desta prévia vem de `public/content/preview.json`, consultado via Fetch na entrada. Os itens de estudos são espaços editoriais provisórios, não registros de livros ou cursos concluídos.
+
+O formato da resposta está em `src/content/types.ts`. Projetos e estudos têm `order` e `published` para ordenar e ocultar itens.
+
+Para trocar a fonte, copie `.env.example` para `.env.local` e defina `VITE_CONTENT_API_URL` com a URL do endpoint que devolverá esse mesmo formato JSON. Reinicie o Vite após mudar variáveis de ambiente.
+
+Na próxima etapa, uma função Vercel lerá a planilha pela Sheets API. Essa função e as credenciais ainda precisam ser configuradas. Credenciais privadas nunca devem usar o prefixo `VITE_`, que as exporia ao navegador.
+
+Não há polling, cópia de conteúdo no build ou espera artificial. Cada montagem consulta a fonte; React StrictMode pode iniciar e cancelar uma primeira consulta no desenvolvimento. Em produção, a consulta é feita na entrada. A indicação discreta de carregamento só fica visível após 1,2 s; falhas ou consultas acima de 12 s exibem um botão para tentar novamente.
+
+## Organização
+
+```text
+src/
+  App.tsx                 Composição inicial e aparições
+  App.module.css          Estilos isolados da interface
+  content/types.ts        Contrato do conteúdo
+  content/useContent.ts   Consulta, cancelamento e nova tentativa
+  styles/global.css       Tokens e estilos globais
+public/content/preview.json  Conteúdo provisório
 ```
 
----
+## Ferramentas
 
-## Deploy
+React, TypeScript, Vite, CSS Modules, ESLint e Prettier. GSAP/ScrollTrigger ficam para a etapa da maçã e Newton.
 
-Este portfólio será publicado utilizando a Vercel.
+```sh
+npm run lint
+npm run format:check
+npm run format
+```
 
-Fluxo básico de publicação:
-
-1. Enviar o projeto para o GitHub.
-2. Importar o repositório na Vercel.
-3. Configurar o build, se necessário.
-4. Publicar o projeto.
-5. Adicionar um domínio personalizado futuramente.
-
----
-
-## Roadmap
-
-- [ ] Criar o layout inicial responsivo.
-- [ ] Adicionar seção inicial de apresentação.
-- [ ] Adicionar seção de projetos.
-- [ ] Criar cards para projetos em destaque.
-- [ ] Adicionar página individual para cada projeto.
-- [ ] Adicionar seção de habilidades técnicas.
-- [ ] Adicionar link para currículo.
-- [ ] Criar seção de contato.
-- [ ] Melhorar acessibilidade.
-- [ ] Publicar na Vercel.
-- [ ] Adicionar domínio personalizado.
-
----
-
-## Autor
-
-**João Victor Predeus Dos Santos Silva**
-
-Estudante do Ensino Médio Integrado ao Técnico em Informática, com foco em desenvolvimento de software, back-end, Java, bancos de dados e arquitetura de sistemas.
-
-- GitHub: [vpredeus](https://github.com/vpredeus)
-- Portfólio: em desenvolvimento
-- LinkedIn: em desenvolvimento
-- E-mail: [jvpredeus@gmail.com](mailto:jvpredeus@gmail.com)
-
----
-
-## Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-<p align="center">
-  Desenvolvido com foco em aprendizado, organização e evolução contínua.
-</p>
+Esta etapa é local: nenhum deploy, commit ou push é feito automaticamente.
